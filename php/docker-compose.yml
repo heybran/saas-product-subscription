@@ -1,0 +1,19 @@
+version: '3'
+services:
+  php:
+    image: php:latest
+    volumes:
+    # mount a directory or file from the host machine
+    # to a specific location inside the container.
+    # This volume mapping allows you to make changs to files
+    # on the host machine, and those changes will be reflected inside the container.
+      - .:/var/www/html
+    ports:
+      - 8080:80
+    # the command configuration will be excuted when the container starts.
+    # -S 0.0.0.0:80 specifies the built-in web server options.
+    # -S stands for "server" and 0.0.0.0:80 specifies the IP Address
+    # and port on which the server will listen.
+    # -t /var/www/html sets the document root directory for the 
+    # PHP built-in web server.
+    command: php -S 0.0.0.0:80 -t /var/www/html
