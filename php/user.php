@@ -21,5 +21,13 @@ class User {
     $this->email = $email;
     $this->country = $country;
   }
+
+  public function getEmail(): string {
+    return $this->email;
+  }
+
+  public function getCountry(): string {
+    return $this->country;
+  }
 }
 ?>

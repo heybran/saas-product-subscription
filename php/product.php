@@ -63,17 +63,21 @@ abstract class Product {
   }
 }
 
-class FreePlan extends Product {
-  /**
-   * @param User $owner The owner of the product
-   */
-  public function __construct(User $owner) {
-    $this->name = 'Free';
-    $this->price = 0.00;
-    $this->owner = $owner;
-    $this->subscriptionType = '';
-  }
-}
+/**
+ * Fatal error: Cannot declare class SPS\FreePlan, 
+ * because the name is already in use in /var/www/html/Product.php on line 66
+ */
+// class FreePlan extends Product {
+//   /**
+//    * @param User $owner The owner of the product
+//    */
+//   public function __construct(User $owner) {
+//     $this->name = 'Free';
+//     $this->price = 0.00;
+//     $this->owner = $owner;
+//     $this->subscriptionType = '';
+//   }
+// }
 
 class ProPlan extends Product {
   /**
@@ -96,7 +100,3 @@ class ProPlan extends Product {
     $this->owner = $owner;
   }
 }
-
-$product1 = new FreePlan(new User('brandon@example.com', 'China'));
-
-var_dump($product1);
