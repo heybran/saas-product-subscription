@@ -17,3 +17,8 @@ services:
     # -t /var/www/html sets the document root directory for the 
     # PHP built-in web server.
     command: php -S 0.0.0.0:80 -t /var/www/html
+  composer:
+    image: composer:latest
+    volumes:
+      - .:/var/www/html
+    working_dir: /var/www/html

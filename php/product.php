@@ -15,9 +15,9 @@ declare(strict_types = 1);
 
 namespace SPS;
 
-require_once __DIR__ . '/user.php';
+require __DIR__. '/vendor/autoload.php';
 
-use \SPS\User\User as User;
+use \SPS\User;
 
 abstract class Product {
   /**

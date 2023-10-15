@@ -5,7 +5,7 @@
 
 declare(strict_types = 1);
 
-namespace SPS\User;
+namespace SPS;
 
 class User {
   /**

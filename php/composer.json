@@ -1,0 +1,10 @@
+{
+    "name": "heybran/sps",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "SPS\\": ""
+        }
+    },
+    "require": {}
+}
